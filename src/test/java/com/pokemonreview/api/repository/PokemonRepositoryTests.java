@@ -50,8 +50,9 @@ class PokemonRepositoryTests {
 
         List<Pokemon> pokemonList = pokemonRepository.findAll();
 
-        Assertions.assertThat(pokemonList).isNotNull();
-        Assertions.assertThat(pokemonList.size()).isEqualTo(2);
+        Assertions.assertThat(pokemonList)
+                .isNotNull()
+                .hasSize(2);
     }
 
     @Test
